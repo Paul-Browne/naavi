@@ -125,6 +125,93 @@ h6, .h6 {font-size: 0.615em; font-weight: 400 }
 
 
 
+.nav ul {
+	list-style-type: none;
+	padding:0;
+	margin-bottom:0;
+	background:white;
+}
+
+.nav ul ul {
+	display:none
+}
+
+.nav > ul li {
+	float:left;
+	display:block;
+}
+
+.nav > ul ul li {
+	width: 100%;
+}
+
+.nav > ul > li.parent > ul > li.parent > ul {
+	left:100%;
+	width:100%;
+	top:0;
+}
+
+li.hover > ul {
+	display:block;
+	position:absolute; 
+}
+
+.nav > ul > li:hover > ul,
+.nav > ul > li.parent > ul > li:hover > ul{
+	display:block;  
+	position:absolute; 
+}
+
+ul ul li.hover ul,
+li.parent {
+	position:relative;
+}
+
+.more {
+	display:none;   
+}
+
+.parent .parent .parent .more {
+	display:block;
+}
+
+.nav li a {
+	padding:5px 12px;
+}
+
+
+
+
+/*
+.nav ul {
+	list-style-type: none;
+	padding:0;
+	margin-bottom:0;
+	background:white;
+}
+
+.nav ul ul,
+.more {
+	display:none;
+}
+
+.nav > ul > li {
+	float:left;
+	display:block;
+}
+
+.nav > ul > li:hover > ul,
+.nav > ul > li.parent > ul > li:hover > ul{
+	display:block;  
+	position:absolute; 
+}
+
+*/
+
+
+
+
+
 
 /*==========================*/
 /* print */
