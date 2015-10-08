@@ -10,4 +10,6 @@ Well, it includes hover-intent, practically meaning a user's mouse can leave a n
 
 
 
+Siblings close automatically when another sibling on the same level is opened
+
 NOTE: the script only aids functionality, it only attaches classes, it does not attach styles 
