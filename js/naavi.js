@@ -1,8 +1,2 @@
-$(document).ready(function() {	
-    $(".nav ul").parent('li').addClass('clearfix parent');
-    $('<span class="more">+++</span>').insertAfter($('.parent > a'));
-    $("nav li .more").unbind('click').bind('click', function() {
-		$(this).parent("li").toggleClass("hover");
-        $(this).parent("li").siblings().removeClass("hover");
-	});
-});
+/*! naavi.min.js | MIT license | Paul Browne */
+!function(){function d(a,b){for(;(a=a.parentNode)&&a!==b;);return!!a}function e(a,b){return window.addEventListener("mousemove",function(){clearTimeout(b),b=setTimeout(a,250)}),a}function f(){b[g].addEventListener("mouseenter",function(){var a=this;a.className+=" hi-hover",e(function(){a.className.match(/(?:^|\s)hi-hover(?!\S)/)&&!a.className.match(/(?:^|\s)hi-intent(?!\S)/)&&(a.className+=" hi-intent")})}),b[g].addEventListener("mouseleave",function(){var a=this;a.className=a.className.replace(/(?:^|\s)hi-hover(?!\S)/g,""),e(function(){a.className.match(/(?:^|\s)hi-intent(?!\S)/)&&!a.className.match(/(?:^|\s)hi-hover(?!\S)/)&&(a.className=a.className.replace(/(?:^|\s)hi-intent(?!\S)/g,""))})})}var a=document.getElementsByTagName("html")[0];"ontouchstart"in window||navigator.MaxTouchPoints>0||navigator.msMaxTouchPoints>0?a.className+=" touch":a.className+=" no-touch";for(var b=document.getElementsByTagName("li"),c=document.getElementsByTagName("nav")[0],g=0;g<b.length;++g){var h=d(b[g],c);h&&f()}for(var i=document.getElementsByTagName("ul"),j=0;j<i.length;++j){var k=i[j].parentNode;if("LI"==k.nodeName||"NAV"==k.nodeName){var l=document.createElement("span");l.className="more",l.addEventListener("click",function(){function b(a,b){for(var c=[];a;a=a.nextSibling)1==a.nodeType&&a!=b&&c.push(a);return c}function c(a){return b(a.parentNode.firstChild,a)}for(var a=this.parentNode,d=c(a),e=0;e<d.length;++e)d[e].className.match(/(?:^|\s)active(?!\S)/)&&(d[e].className=d[e].className.replace(/(?:^|\s)active(?!\S)/g," inactive"));a.className.match(/(?:^|\s)inactive(?!\S)/)?a.className=a.className.replace(/(?:^|\s)inactive(?!\S)/g," active"):a.className=a.className.replace(/(?:^|\s)active(?!\S)/g," inactive")}),k.className+=" inactive",k.insertBefore(l,i[j])}}}();
