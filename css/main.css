@@ -2,9 +2,7 @@ body {
   margin: 0;
 }
 
-@media screen and (min-width: 401px) {
-/* function */
-
+@media screen and (min-width: 681px) {
   nav {
     display: block;
     margin: 20px 0;
@@ -13,12 +11,7 @@ body {
 
   nav > ul {
     display: inline-block;
-    margin: 0 auto;
     vertical-align: middle;
-  }
-
-  nav li {
-    position: relative;
   }
 
   nav ul {
@@ -30,7 +23,6 @@ body {
 
   nav ul ul {
     display: none;
-    position: static;
   }
 
   nav > ul > li {
@@ -42,6 +34,10 @@ body {
     margin: 0 10px;
     line-height: 33px;
     display: inline-block;
+  }
+
+  nav span.more {
+    display: none;
   }
 
   .no-touch nav > ul > li.hi-intent > ul,
@@ -58,24 +54,24 @@ body {
     margin-top: -33px;
   }
 
-  .touch nav > ul > li > ul > li > ul > li.active > ul,
-  .no-touch nav > ul > li > ul > li > ul > li.active > ul {
+  .touch nav ul ul ul li.active > ul,
+  .no-touch nav ul ul ul li.active > ul {
     position: relative;
     display: block;
+    left: 0;
+    margin-top: 0;
   }
 
-  .no-touch nav ul ul ul > li.inactive > span.more:after {
-    content: "++";
+  .no-touch nav ul ul ul span.more {
+    display: inline-block;
   }
 
-  .no-touch nav ul ul ul > li.active > span.more:after {
-    content: "--";
-  }            
+  .no-touch nav ul ul ul li.inactive > span.more:after {
+    content: "+";
+  }
 
-/* style */
-
-  nav li li {
-    text-align: left;
+  .no-touch nav ul ul ul li.active > span.more:after {
+    content: "-";
   }
 
   nav ul ul {
@@ -87,16 +83,15 @@ body {
   }
 
   .touch nav li.inactive > span.more:after {
-    content: "++";
+    content: "+";
   }
 
   .touch nav li.active > span.more:after {
-    content: "--";
+    content: "-";
   }
 }
 
-@media screen and (max-width: 400px) {
-  
+@media screen and (max-width: 680px) {
   nav {
     position: absolute;
     width: 100%;
@@ -125,32 +120,32 @@ body {
     display: none;
   }
 
-  nav li.active >ul {
+  nav li.active > ul {
     display: block;
   }
 
   nav li {
-    border-top: 1px solid;
+    border-top: 1px solid #fff;
   }
 
   nav > ul > li:first-child {
-    border-top: 0px solid;
+    border-top: 0px solid #fff;
   }
 
-  nav a,
-  nav span {
+  nav a,nav span {
     margin: 0 5px;
     line-height: 40px;
-    font-size: 18px;
+    font-size: 20px;
+    text-decoration: none;
   }
 
-  nav ul ul {
-    background: rgba(0,0,0,0.1);
+  nav ul {
+    background: rgba(177,1,77,0.07);
   }
 
   nav span.more {
     margin: 0;
-    background: lightgreen;
+    background: rgba(0,0,0,0.1);
     position: absolute;
     right: 0;
     width: 40px;
@@ -158,11 +153,11 @@ body {
   }
 
   nav li.inactive > span.more:after {
-    content: "++";
+    content: "+";
   }
 
   nav li.active > span.more:after {
-    content: "--";
+    content: "-";
   }
 
   nav > span.more {
@@ -171,10 +166,16 @@ body {
     top: 0;
     right: 0;
     z-index: 77;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
   }
 
-  nav > span.more:after {
-    content: "menu";
+  nav.inactive > span.more:after {
+    content: "M";
+  }
+
+  nav.active > span.more:after {
+    content: "X";
   }
 
   nav > ul > li:first-child > span.more {
