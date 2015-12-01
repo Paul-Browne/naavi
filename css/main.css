@@ -2,7 +2,7 @@ body {
   margin: 0;
 }
 
-<<<<<<< HEAD
+
 @font-face {
   font-family: 'fontello';
   src: url('../fonts/fontello.eot?44318276');
@@ -47,9 +47,6 @@ nav a{
 @media screen and (min-width: 401px) {
 /* function */
 
-=======
-@media screen and (min-width: 681px) {
->>>>>>> origin/master
   nav {
     display: block;
     margin: 20px 0;
@@ -109,7 +106,7 @@ nav a{
     margin-top: 0;
   }
 
-<<<<<<< HEAD
+
   .no-touch nav ul ul ul > li.inactive > span.more:before {
     content: "\e800";
   }
@@ -119,15 +116,7 @@ nav a{
   }            
 
 /* style */
-=======
-  .no-touch nav ul ul ul span.more {
-    display: inline-block;
-  }
 
-  .no-touch nav ul ul ul li.inactive > span.more:after {
-    content: "+";
-  }
->>>>>>> origin/master
 
   .no-touch nav ul ul ul li.active > span.more:after {
     content: "-";
@@ -145,7 +134,7 @@ nav a{
       display: inline-block;
   }
 
-<<<<<<< HEAD
+
     
   .touch nav li.inactive > span.more:before {
     content: "\e800";
@@ -153,14 +142,7 @@ nav a{
 
   .touch nav li.active > span.more:before {
     content: "\e801";
-=======
-  .touch nav li.inactive > span.more:after {
-    content: "+";
-  }
 
-  .touch nav li.active > span.more:after {
-    content: "-";
->>>>>>> origin/master
   }
 }
 
@@ -222,32 +204,23 @@ nav a{
 
   nav span.more {
     margin: 0;
-<<<<<<< HEAD
+
     background: rgba(255,255,255,0.2);
-=======
-    background: rgba(0,0,0,0.1);
->>>>>>> origin/master
+
     position: absolute;
     right: 0;
     width: 40px;
     text-align: center;
   }
 
-<<<<<<< HEAD
+
   nav li.inactive > span.more:before {
     content: "\e800";
   }
 
   nav li.active > span.more:before {
     content: "\e801";
-=======
-  nav li.inactive > span.more:after {
-    content: "+";
-  }
 
-  nav li.active > span.more:after {
-    content: "-";
->>>>>>> origin/master
   }
 
   nav > span.more {
@@ -260,21 +233,13 @@ nav a{
     border-bottom: 1px solid #fff;
   }
 
-  nav.inactive > span.more:after {
-    content: "M";
-  }
-
-<<<<<<< HEAD
   nav > span.more:before {
     content: "\e802";
   }
     
   nav.active > span.more:before {
     content: "\e808";
-=======
-  nav.active > span.more:after {
-    content: "X";
->>>>>>> origin/master
+
   }
 
   nav > ul > li:first-child > span.more {
