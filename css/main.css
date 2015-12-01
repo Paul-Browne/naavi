@@ -2,6 +2,7 @@ body {
   margin: 0;
 }
 
+<<<<<<< HEAD
 @font-face {
   font-family: 'fontello';
   src: url('../fonts/fontello.eot?44318276');
@@ -46,6 +47,9 @@ nav a{
 @media screen and (min-width: 401px) {
 /* function */
 
+=======
+@media screen and (min-width: 681px) {
+>>>>>>> origin/master
   nav {
     display: block;
     margin: 20px 0;
@@ -54,7 +58,6 @@ nav a{
 
   nav > ul {
     display: inline-block;
-    margin: 0 auto;
     vertical-align: middle;
   }
 
@@ -80,6 +83,10 @@ nav a{
     display: inline-block;
   }
 
+  nav span.more {
+    display: none;
+  }
+
   .no-touch nav > ul > li.hi-intent > ul,
   .touch nav > ul > li.active > ul {
     display: block;
@@ -98,8 +105,11 @@ nav a{
   .no-touch nav ul ul ul li.active > ul {
     position: relative;
     display: block;
+    left: 0;
+    margin-top: 0;
   }
 
+<<<<<<< HEAD
   .no-touch nav ul ul ul > li.inactive > span.more:before {
     content: "\e800";
   }
@@ -109,9 +119,18 @@ nav a{
   }            
 
 /* style */
+=======
+  .no-touch nav ul ul ul span.more {
+    display: inline-block;
+  }
 
-  nav li li {
-    text-align: left;
+  .no-touch nav ul ul ul li.inactive > span.more:after {
+    content: "+";
+  }
+>>>>>>> origin/master
+
+  .no-touch nav ul ul ul li.active > span.more:after {
+    content: "-";
   }
 
   nav ul ul {
@@ -126,6 +145,7 @@ nav a{
       display: inline-block;
   }
 
+<<<<<<< HEAD
     
   .touch nav li.inactive > span.more:before {
     content: "\e800";
@@ -133,11 +153,18 @@ nav a{
 
   .touch nav li.active > span.more:before {
     content: "\e801";
+=======
+  .touch nav li.inactive > span.more:after {
+    content: "+";
+  }
+
+  .touch nav li.active > span.more:after {
+    content: "-";
+>>>>>>> origin/master
   }
 }
 
-@media screen and (max-width: 400px) {
-  
+@media screen and (max-width: 680px) {
   nav {
     position: absolute;
     width: 100%;
@@ -171,43 +198,56 @@ nav a{
   }
 
   nav li {
-    border-top: 1px solid;
+    border-top: 1px solid #fff;
   }
 
   nav > ul > li:first-child {
-    border-top: 0px solid;
+    border-top: 0px solid #fff;
   }
     
   nav > ul {
     border-bottom: 1px solid;
   }
 
-  nav a,
-  nav span {
+  nav a,nav span {
     margin: 0 5px;
     line-height: 40px;
-    font-size: 18px;
+    font-size: 20px;
+    text-decoration: none;
   }
 
-  nav ul ul {
-    background: rgba(0,0,0,0.1);
+  nav ul {
+    background: rgba(177,1,77,0.07);
   }
 
   nav span.more {
     margin: 0;
+<<<<<<< HEAD
     background: rgba(255,255,255,0.2);
+=======
+    background: rgba(0,0,0,0.1);
+>>>>>>> origin/master
     position: absolute;
     right: 0;
     width: 40px;
     text-align: center;
   }
 
+<<<<<<< HEAD
   nav li.inactive > span.more:before {
     content: "\e800";
   }
 
   nav li.active > span.more:before {
     content: "\e801";
+=======
+  nav li.inactive > span.more:after {
+    content: "+";
+  }
+
+  nav li.active > span.more:after {
+    content: "-";
+>>>>>>> origin/master
   }
 
   nav > span.more {
@@ -216,14 +256,25 @@ nav a{
     top: 0;
     right: 0;
     z-index: 77;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
   }
 
+  nav.inactive > span.more:after {
+    content: "M";
+  }
+
+<<<<<<< HEAD
   nav > span.more:before {
     content: "\e802";
   }
     
   nav.active > span.more:before {
     content: "\e808";
+=======
+  nav.active > span.more:after {
+    content: "X";
+>>>>>>> origin/master
   }
 
   nav > ul > li:first-child > span.more {
